@@ -1,0 +1,32 @@
+CODEBUCH,,
+,,
+Wert,Kommentar,
+,,
+edgelist,,
+from,"definiert den Supermarkt, der einen Post/Kommentar mit Bezug auf einen anderen Supermarkt postet (gerichtetes Netzwerk). Entspricht ID in der Nodelist.",
+to ,definiert den in einem Post/Kommentar erwähnten Supermarkt im gerichteten Netzwerk. Entspricht ID in der Nodelist.,
+relationship,"definiert die Art der Beziehung zwischen den Supermärkten mit verschiedenen Beziehungsarten: necken (humorvoll), Information (sachlich), dissen (gemein), zusammengehörigkeit (unterstützend), positiv",
+Art der Erwähnung,definiert die Art der Erwähnung des Supermarktes nach folgender Skala:,
+,1,im Post
+,2,im Kommentar
+,3,mehrfach in Post und Bild
+,4,in Post und Bild
+,5,verlinkte Webseite
+,6,als Hashtag
+,7,in Post und Video
+,8,im Bild
+Verlinkung,"definiert, ob der Supermarkt bei der Ewähnung auch verlinkt wurde.",
+Zugehörigkeit der Marken,"definiert die Gruppe, zu denen die Supermärkte gehören (Supermarktketten). Definiert nach folgenden Skalen:",
+,1,Edeka-Gruppe
+,2,Rewe-Gruppe
+,3,Schwarz-Gruppe
+,4,Aldi-Gruppe
+,5,Metro-Gruppe
+Datum,"definiert den Zeitpunkt, an dem der Post veröffentlicht wurde.",
+Likes pro Post,"definiert, wie oft der veröffentlichte Post von anderen Facebook-Usern geliket wurde.",
+,,
+nodelist,,
+id,"eindeutige Identifikation jedes einzelnen Knotens (Supermarkt), der erfasst wird.  ",
+name,Name des Supermarkts. ,
+facebook likes (fans),definiert die Anzahl der Likes des Facebook-Accounts der Supermärkte (gemessen bei Facebook Stand: 25.07.2018),
+ausgehende Aktion,"definiert die Anzahl der erhobenen Posts/Kommentare, in denen der Supermarkt einen anderen Supermarkt erwähnt hat.",
