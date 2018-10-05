@@ -1,0 +1,137 @@
+### SKRIPT SUPERMÄRKTE ###
+
+# Zusammenfügen der Edge- und Nodelist
+
+library(igraph)
+# liest die Dateien direkt aus dem github-Verzeichnis ein, Link von Raw-Datei verwenden!
+el <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Test-Gruppe-08/master/Final_Datenerhebung%20und%20Codebuch%20-%20Edgelist.csv", header=T, as.is=T, sep = ",")
+nodes <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Test-Gruppe-08/master/Final_Datenerhebung%20und%20Codebuch%20-%20Nodelist.csv", header=T, as.is=T, sep = ",")
+# prüft, ob alle Variablen eingelesen wurden
+head(el)
+head(nodes)
+# wandelt die edgelist in eine Matrix um und baut das igraph-Objekt
+hties <-as.matrix(el)
+super <- graph_from_data_frame(d=hties, vertices=nodes, directed=T)
+super
+plot(super)
+
+# Welche Attribute haben die Kanten?
+list.edge.attributes(super)
+
+# Welche Attribute haben die Knoten?
+list.vertex.attributes(super)
+
+# Wie sind die entsprechenden Attribute verteilt?
+E(super)$relationship #Verteilung der Beziehungen in der edgelist
+rel <- E(super)$relationship # kreiert einen Vektor mit den Werten aus "relationship
+rel # zeigt alle Beziehungen der Edges im Netzwerk an
+
+art <- E(super)$artdererwaehnung
+art
+
+link <- E(super)$verlinkunghashtag
+link
+
+datum <- E(super)$datum
+datum
+
+like <- E(super)$likespropost
+like
+
+# Genau das gleiche lässt sich mit den Vertex-Attributen machen:
+name <- V(super)$name
+fblikes <- V(super)$facebooklikes
+act <- V(super)$ausgehendeaktionen
+marke <- V(super)$zugehoerigkeitdermarke
+
+name
+fblikes
+act
+marke
+
+
+# LEKTION 2: Einfache Netzwerkdaten analysieren
+
+# Uns interessieren einfache Netzwerkdaten, bezogen auf a) Netzwerkmaße und b) Akteursmaße.
+
+# 1. Netzwerk-Maße (bezogen auf das gesamte Neztzwerk)
+
+# Wie viele Knoten und Kanten sind im Netzwerk?
+ecount(super) # Anzahl der edges
+vcount(super) # Anzahl der vertices
+
+super
+
+# Dichte des Netzwerks
+edge_density(super)
+
+# 2. POSITIONALE bzw. AKTEURSbezogene Maße (bezogen auf die Position einzelner Knoten im Netzwerk)
+
+# Wer ist am stärksten im Netzwerk vernetzt? (allgemeiner Degree-Wert)
+degree(super)
+
+
+# Bei einem gerichteten Netzwerk könnten wir die In- und Outdegrees analysieren.
+degree(super, mode ="out")
+
+# Degree-Wert normalisieren, d.h. alle Werte werden auf prozentuale Werte zwischen 0 und 1 umgerechnet.
+
+degree(super, mode="all", normalized = TRUE)
+
+# Welcher Akteur hat nun den höchsten Zentralitätswert?
+
+# Zentralisierter Degree-Wert
+centr_degree(super)$centralization
+
+#Zentralisierter Closeness-Wert
+centr_clo(super, mode = "all")$centralization
+
+#Zentralisierter Betweenness-Wert
+centr_betw(super, directed = FALSE)$centralization
+
+#Zentralisierter Eigenvector-Wert
+centr_eigen(super, directed = FALSE)$centralization
+
+# Für den Vergleich der Werte die einzelnen Unterschiede der Zentralitätsmaße und deren Auswertung anschauen.
+
+# Zur Visualisierung der Knoten gleich einen Vector "zentr" anlegen, damit wir den Wert nicht nochmals berechnen müssen:
+
+zentr <- degree(super, mode="all", normalized = TRUE)
+zentr
+
+# Betweenness (Maß für die Brokerage von Knoten im Netzwerk)
+betweenness(super)
+edge_betweenness(super)
+
+
+
+# LEKTION 3: Teilnetzwerke auswählen
+
+# Triadenzenus (nur bei gerichteten Netzwerken)
+triad_census(super)
+
+#Verbindungen der einzelnen Knoten
+
+#Auflistung der Verbindungen der Knoten (entspricht degree)
+ego_size(super)
+
+#Detaillierte Aufstellung aller Knoten und deren direkte Verbindung
+ego(super)
+
+ego(super, order = 1, nodes = V(super)$name == "Aldi", mode = "all")
+#selektiert das Ego-Netzwerk von Aldi. In einem gerichteten Netzwerken kann "mode" durch in und out unterschieden werden. Mit dem Befehl "order" werden die angrenzenden Knoten ausgewählt, bei 1 sind dies alle Knoten, die direkt mit ego verbunden sind. Bei order = 2 werden auch Knoten erfasst, die zwei Schritte von Ego entfernt sind.
+
+ego(super, order = 1, nodes = V(super)$name == "Lidl", mode = "all")
+
+Aldi <- make_ego_graph(super, order = 1, nodes = V(super)$name == "Aldi", mode = "all")
+Aldi
+plot(Aldi[[1]]) # Visualisierungsbefehl
+
+Lidl <- make_ego_graph(super, order = 1, nodes = V(super)$name == "Lidl", mode = "all")
+Lidl
+plot(Lidl[[1]]) # Visualisierungsbefehl
+
+ego(super, order = 1, nodes = V(super)$name == "Real", mode = "all")
+Real <- make_ego_graph(super, order = 1, nodes = V(super)$name == "Real", mode = "all")
+Real
+plot(Real[[1]]) # Visualisierungsbefehl
