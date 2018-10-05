@@ -1,64 +1,64 @@
 from,to,relationship,artdererwaehnung,verlinkunghashtag,datum,likespropost
-L,E,necken,3,ja,05 September 2017,8908
-L,A,information,5,nein,16 September 2017,218
-L,R,dissen,4,ja,29 September 2017,7900
-L,P,dissen,2,ja,27 Oktober 2017,231
-L,P,zusammengehoerigkeit,4,ja,09 November 2017,8320
-L,R,necken,8,nein,14 November 2017,11702
-L,P,necken,8,nein,14 November 2017,11702
-L,A,necken,8,nein,14 November 2017,11702
-L,E,necken,8,nein,14 November 2017,11702
-L,RL,necken,8,nein,14 November 2017,11702
-L,E,dissen,7,ja,06 Dezember 2017,3641
-L,E,positiv,2,ja,06 Dezember 2017,315
-L,A,necken,4,ja,06 Februar 2018,4170
-L,N,necken,8,nein,08 Februar 2018,479
-L,A,necken,2,nein,14 Februar 2018,231
-L,A,dissen,4,ja,12 Maerz 2018,12788
-L,P,necken,1,ja,23 Maerz 2018,2001
-L,A,dissen,3,ja,27 Maerz 2018,12221
-L,N,necken ,2,ja,10 November 2017,8
-K,L,zusammengehoerigkeit,5,nein,28 Februar 2018,748
-A,L,necken,1,ja,22 Mai 2018,636
-A,E,necken,1,ja,22 Mai 2018,636
-A,N,necken,1,ja,22 Mai 2018,636
-A,L,necken,1,ja,07 Mai 2018,2470
-A,P,necken,1,ja,05 Maerz 2018,3121
-A,N,necken,1,ja,05 Maerz 2018,3121
-A,L,necken,1,ja,05 Mearz 2018,3121
-A,L,necken,1,ja,15 Februar 2018,922
-A,L,necken,1,ja,06 Februar 2018,2231
-A,P,positiv,1,ja,01 Dezember 2017,1295
-A,L,positiv,1,ja,01 Dezember 2017,1295
-A,R,positiv,1,ja,01 Dezember 2017,1295
-A,E,positiv,1,ja,01 Dezember 2017,1295
-A,N,positiv,1,ja,01 Dezember 2017,1295
-A,K,necken,6,ja,30 Oktober 2017,646
-A,L,necken,2,ja,27 Oktober 2017,1632
-A,L,necken,2,ja,27 Oktober 2017,163
-A,P,necken,2,ja,27 Oktober 2017,257
-A,N,necken,2,ja,28 Februar 2018,23
-A,N,positiv,2,ja,07 Dezember 2017,28
-A,N,necken,2,nein,05 Maerz 2018,160
-A,L,necken,2,ja,05 Maerz 2018,160
-P,L,necken,1,ja,14 April 2018,907
-P,A,positiv,7,ja,11 November 2017,670
-P,A,necken,2,ja,23 Maerz 2018,2001
-P,N,necken,2,ja,23 Maerz 2018,2001
-P,L,necken,2,ja,23 Maerz 2018,2001
-P,E,necken,2,ja,23 Maerz 2018,2001
-P,K,necken,2,ja,23 Maerz 2018,2001
-P,RL,necken,2,ja,23 Maerz 2018,2001
-P,N,necken,2,nein,10 November 2017,152
-R,P,information,2,nein,26 November 2018,0
-E,L,dissen,1,ja,08 Dezember 2017,3325
-N,A,necken,8,nein,28 Februar 2018,358
-N,A,necken,2,nein,05 Maerz 2018,731
-N,A,necken,4,ja,07 Dezember 2017,1530
-N,A,positiv,2,ja,07 Dezember 2017,12
-N,L,necken,4,ja,01 Dezember 2017,400
-N,K,necken,4,ja,01 Dezember 2017,400
-N,P,necken,1,ja,14 November 2017,1144
-N,L,necken,1,ja,10 November 2017,1664
-N,L,necken,1,ja,03 September 2017,2211
-N,K,necken,1,ja,03 September 2017,2211
+L,E,necken,3,ja,05september2017,8908
+L,A,information,5,nein,16september2017,218
+L,R,dissen,4,ja,29september2017,7900
+L,P,dissen,2,ja,27oktober2017,231
+L,P,zusammengehoerigkeit,4,ja,09november2017,8320
+L,R,necken,8,nein,14november2017,11702
+L,P,necken,8,nein,14november2017,11702
+L,A,necken,8,nein,14november2017,11702
+L,E,necken,8,nein,14november2017,11702
+L,RL,necken,8,nein,14november2017,11702
+L,E,dissen,7,ja,06dezember2017,3641
+L,E,positiv,2,ja,06dezember2017,315
+L,A,necken,4,ja,06februar2018,4170
+L,N,necken,8,nein,08februar2018,479
+L,A,necken,2,nein,14februar2018,231
+L,A,dissen,4,ja,12maerz2018,12788
+L,P,necken,1,ja,23maerz2018,2001
+L,A,dissen,3,ja,27maerz2018,12221
+L,N,necken ,2,ja,10november2017,8
+K,L,zusammengehoerigkeit,5,nein,28februar2018,748
+A,L,necken,1,ja,22mai2018,636
+A,E,necken,1,ja,22mai2018,636
+A,N,necken,1,ja,22mai2018,636
+A,L,necken,1,ja,07mai2018,2470
+A,P,necken,1,ja,05maerz2018,3121
+A,N,necken,1,ja,05maerz2018,3121
+A,L,necken,1,ja,05maerz2018,3121
+A,L,necken,1,ja,15februar2018,922
+A,L,necken,1,ja,06februar2018,2231
+A,P,positiv,1,ja,01dezember2017,1295
+A,L,positiv,1,ja,01dezember2017,1295
+A,R,positiv,1,ja,01dezember2017,1295
+A,E,positiv,1,ja,01dezember2017,1295
+A,N,positiv,1,ja,01dezember2017,1295
+A,K,necken,6,ja,30oktober2017,646
+A,L,necken,2,ja,27oktober2017,1632
+A,L,necken,2,ja,27oktober2017,163
+A,P,necken,2,ja,27oktober2017,257
+A,N,necken,2,ja,28februar2018,23
+A,N,positiv,2,ja,07dezember2017,28
+A,N,necken,2,nein,05maerz2018,160
+A,L,necken,2,ja,05maerz2018,160
+P,L,necken,1,ja,14april2018,907
+P,A,positiv,7,ja,11november2017,670
+P,A,necken,2,ja,23maerz2018,2001
+P,N,necken,2,ja,23maerz2018,2001
+P,L,necken,2,ja,23maerz2018,2001
+P,E,necken,2,ja,23maerz2018,2001
+P,K,necken,2,ja,23maerz2018,2001
+P,RL,necken,2,ja,23maerz2018,2001
+P,N,necken,2,nein,10november2017,152
+R,P,information,2,nein,26november2018,0
+E,L,dissen,1,ja,08dezember2017,3325
+N,A,necken,8,nein,28februar2018,358
+N,A,necken,2,nein,05maerz2018,731
+N,A,necken,4,ja,07dezember2017,1530
+N,A,positiv,2,ja,07dezember2017,12
+N,L,necken,4,ja,01dezember2017,400
+N,K,necken,4,ja,01dezember2017,400
+N,P,necken,1,ja,14november2017,1144
+N,L,necken,1,ja,10november2017,1664
+N,L,necken,1,ja,03september2017,2211
+N,K,necken,1,ja,03september2017,2211
