@@ -61,3 +61,7 @@ plot(snegativ)
 E(spositiv)$color <- "green"
 plot(spositiv)
 
+edge.attributes(super)$relationship
+colrs <-c("red", "green")
+E(spositiv)$color <-E(super)$relationship
+plot(super)
