@@ -52,14 +52,14 @@ plot(super)
 
 # Farben der Kanten zuweisen
 
-snegativ <- subgraph.edges(super, E(super)[relationship < "3"])
-spositiv <- subgraph.edges(super, E(super)[relationship > "2"])
-plot(snegativ)
-spositiv
-E(snegativ)$color <- "red"
-plot(snegativ)
-E(spositiv)$color <- "green"
-plot(spositiv)
+#snegativ <- subgraph.edges(super, E(super)[relationship < "3"])
+#spositiv <- subgraph.edges(super, E(super)[relationship > "2"])
+#plot(snegativ)
+#spositiv
+#E(snegativ)$color <- "red"
+#plot(snegativ)
+#E(spositiv)$color <- "green"
+#plot(spositiv)
 
 edge.attributes(super)$relationship
 colrs <-c("red", "green")
