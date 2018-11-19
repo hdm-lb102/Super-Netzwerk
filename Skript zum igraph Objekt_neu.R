@@ -24,32 +24,34 @@ plot(super, vertex.size=ds)
 
 
 E(super)$arrow.size <- .2 # definiert die Pfeilspitze auf 20% des Ursprungswerts
-E(super)$color="black" # definiert die Kantenfarbe auf schwarz
-plot(super)
+E(super)$color="grey" # definiert die Kantenfarbe auf schwarz
+plot(super, vertex.size=ds)
 
 #######################################################
 #!!!!!!!? Dicke der Kanten
-E(super)$relationship <- E(super)$weight
+list.edge.attributes(super)
+list.vertex.attributes(super)
+
 
 # simplify-Befehl: addiert edges auf, wenn sie auf der gleichen Beziehung liegen
 # So sieht die Verteilung der Gewichtungen bislang aus:
-edge.attributes(super)$relationship
+edge.attributes(super)$weight
 
 # Achtung: nur verwenden, wenn Sie tatsächlich auch in der edgelist in numerisches weight angelegt haben
 
-kanten <- simplify(super, edge.attr.comb = list(relationship="sum"))
-edge.attributes(kanten)$relationship
+kanten <- simplify(super, edge.attr.comb = list(weight="sum"))
+edge.attributes(kanten)$weight
 # die weights im Netzwerk s1 wurden aufaddiert, sofern sie die gleiche Kante betroffen haben. Damit werden die auswertungen vereinfacht.
 #######################################################
 
 
 # Farben der Knoten (Supermarkt-Gruppen)
 
-farben <- c("palegreen", "red3", "goldenrod1", "royalblue3", "yellow")
+farben <- c("olivedrab1", "rosybrown1", "goldenrod1", "paleturquoise1", "khaki1")
 V(super)$color <- farben[V(super)$zugehoerigkeitdermarke]
 plot(super, vertex.size=ds)
 
-
+plot(super, vertex.size=ds, layout=layout_with_fr, main="Gesamtnetzwerk Super", vertex.label.family = "Helvetica", vertex.label.color = "black", vertex.frame.color = "transparent")
 
 # Teilnetzwerke pos + neg erstellen und nebeneinander legen
 
