@@ -16,8 +16,7 @@ super <- graph_from_data_frame(d=hties, vertices=nodes, directed=T)
 plot(super)
 
 
-# Anpassung der Knotengröße nach Degree-Wert !!!!Degree-Wert vergrößern?!!!
-
+# Anpassung der Knotengröße nach Degree-Wert
 ds <- degree(super)
 par(mfrow=c(1,1))
 plot(super, vertex.size=ds)
