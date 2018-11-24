@@ -99,7 +99,12 @@ outds
 # Real hat als einziger Supermarkt keine Aktivität nach außen.
 
 
-## bitte noch rausfinden wie Dichte des Netzwerks angezeigt werden kann.
-#Wie hoch ist die Interaktion aller Supermärkte (Dichte)?
+#Wie hoch ist die Interaktion aller Supermärkte (Dichte)? ##FALSCH?
+edge_density(super, loops = FALSE)
+# Antwort: sehr dichtes Netzwerk, Gründe: nur 8 Knoten, keine isolierten Knoten, immer mind. 2 relations
 
-density(super)
+# Wie viele reziproke Beziehungen gibt es im Verhältnis zu allen Beziehungen?
+reciprocity(super)
+# Antwort: Ca. 57% der Beziehungen zwischen den Supermärkten sind reziprok. 
+# D.h. Supermärkte erwähnen sich gegenseitig, aber nicht so häufig wie erwartet. 
+# Es gibt keine reinen "Austeiler", lediglich Real ist ein reiner "Empfänger" und erwähnt keine anderen Supermärkte.
