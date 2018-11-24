@@ -4,7 +4,7 @@
 ## laden igraph, edge- und nodelist
 
 library(igraph)
-el <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Edgelist", header=T, as.is=T, sep = ",")
+el <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Edgelist_aufaddiert", header=T, as.is=T, sep = ",")
 nodes <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Nodelist", header=T, as.is=T, sep = ",")
 head(el)
 head(nodes)
@@ -24,14 +24,14 @@ E(super)$arrow.size <- .2
 E(super)$color="grey"
 plot(super, vertex.size=ds)
 
-## Zusammenfassung der Kanten mit simplify
 list.edge.attributes(super)
 list.vertex.attributes(super)
+
+## Zusammengefasste Kanten (händisch aufaddiert) über das weight der edges visualisieren
+
 edge.attributes(super)$weight
-
-kanten <- simplify(super, edge.attr.comb = list(weight="sum"))
-edge.attributes(kanten)$weight
-
+E(super)$width <- E(super)$weight
+plot(super, vertex.size=ds)
 
 ## Zuweisung der Knoten-Farben (Supermarkt-Gruppen)
 
