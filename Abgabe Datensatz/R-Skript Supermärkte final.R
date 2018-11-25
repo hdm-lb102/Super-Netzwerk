@@ -72,11 +72,11 @@ par(mfrow=c(1,2))
 snegativ <- subgraph.edges(super, E(super)[relationship < "3"])
 spositiv <- subgraph.edges(super, E(super)[relationship > "2"])
 
-E(snegativ)$color <- "red"
-plot(snegativ)
+E(snegativ)$color <- "firebrick"
+plot(snegativ, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
 
-E(spositiv)$color <- "green"
-plot(spositiv)
+E(spositiv)$color <- "olivedrab1"
+plot(spositiv, vertex.frame.color = "transparent", vertex.label.family = "Helvetica", vertex.label.color = "black")
 
 
 
@@ -85,7 +85,7 @@ plot(spositiv)
 # ?Welcher Supermarkt wird am häufigsten erwähnt(Popularität)?
 inds <- degree(super, mode="in")
 inds
-# !Antwort: Lidel mit Wert 16.
+# !Antwort: Lidl mit Wert 16.
 
 # ?Welcher teilt am meisten aus(Outdegree)?
 outds <- degree(super, mode="out")
