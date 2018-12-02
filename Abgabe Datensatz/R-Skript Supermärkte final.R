@@ -101,7 +101,8 @@ outds
 
 #Wie hoch ist die Interaktion aller Supermärkte (Dichte)? ##FALSCH?
 edge_density(super, loops = TRUE)
-# Antwort: sehr dichtes Netzwerk, Gründe: nur 8 Knoten, keine isolierten Knoten, immer mind. 2 relations
+# Antwort: Wert = 0.984375: Das heißt es handelt sich um sein sehr dichtes Netzwerk, 
+# Gründe: nur 8 Knoten, keine isolierten Knoten, immer mind. 2 relations
 
 # Wie viele reziproke Beziehungen gibt es im Verhältnis zu allen Beziehungen?
 reciprocity(super)
