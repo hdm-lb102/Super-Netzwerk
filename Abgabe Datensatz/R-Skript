@@ -5,7 +5,7 @@
 
 library(igraph)
 library(igraphdata)
-el <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Edgelist_aufaddiert", header=T, as.is=T, sep = ",")
+el <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Edgelist", header=T, as.is=T, sep = ",")
 nodes <- read.csv("https://raw.githubusercontent.com/hdm-lb102/Super-Netzwerk/master/Abgabe%20Datensatz/Nodelist", header=T, as.is=T, sep = ",")
 head(el)
 head(nodes)
